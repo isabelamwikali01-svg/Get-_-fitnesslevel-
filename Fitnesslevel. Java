@@ -1,0 +1,28 @@
+import java. util. Scanner ;
+public class fitnesslevel {
+    public  static String getfitnesslevel (int steps){
+        if (steps >= 10000) {
+            return "excellent";
+        }
+        else if (steps >= 7000) {
+            return "good";
+        }
+        else if (steps >= 4000) {
+            return "Average";
+        }
+        else {
+            return "poor";
+        }
+        
+    }
+    public static void main (String[] args){
+        Scanner scanner = new Scanner (System.in);
+        System.out.println("Enter your steps for today :");
+        int dailysteps = scanner.nextInt();
+        String fitnesslevel = getfitnesslevel (dailysteps);
+        System.out.println ("your fitnesslevel :" +fitnesslevel);
+        scanner. close() ;
+        
+        
+    }
+}
